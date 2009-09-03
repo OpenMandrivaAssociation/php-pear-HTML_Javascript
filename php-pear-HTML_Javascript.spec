@@ -6,7 +6,7 @@
 Summary:	%{_pearname} - an interface for creating simple JS scripts
 Name:		php-pear-%{_pearname}
 Version:	1.1.1
-Release:	%mkrel 5
+Release:	%mkrel 6
 License:	PHP License
 Group:		Development/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tar.bz2
