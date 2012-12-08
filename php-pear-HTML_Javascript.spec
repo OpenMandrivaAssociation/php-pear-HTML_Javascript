@@ -4,7 +4,7 @@
 
 Name:		php-pear-%{upstream_name}
 Version:	1.1.2
-Release:	%mkrel 5
+Release:	%mkrel 7
 Summary:	An interface for creating simple JS scripts
 License:	PHP License
 Group:		Development/PHP
@@ -54,7 +54,7 @@ pear install --nodeps --soft --force --register-only \
 %if %mdkversion < 201000
 if [ "$1" -eq "0" ]; then
     pear uninstall --nodeps --ignore-errors --register-only \
-        %{upstream_name} >/dev/null || :
+        %{pear_name} >/dev/null || :
 fi
 %endif
 
@@ -63,3 +63,80 @@ fi
 %doc %{upstream_name}-%{version}/examples
 %{_datadir}/pear/%{_class}
 %{_datadir}/pear/packages/%{upstream_name}.xml
+
+
+%changelog
+* Wed May 04 2011 Oden Eriksson <oeriksson@mandriva.com> 1.1.2-4mdv2011.0
++ Revision: 667501
+- mass rebuild
+
+* Fri Dec 03 2010 Oden Eriksson <oeriksson@mandriva.com> 1.1.2-3mdv2011.0
++ Revision: 607102
+- rebuild
+
+* Sat Dec 12 2009 Guillaume Rousse <guillomovitch@mandriva.org> 1.1.2-2mdv2010.1
++ Revision: 477865
+- spec cleanup
+- use pear installer
+- don't ship tests, even in documentation
+- own all directories
+- use rpm filetriggers starting from mandriva 2010.1
+
+* Sun Sep 27 2009 Guillaume Rousse <guillomovitch@mandriva.org> 1.1.2-1mdv2010.0
++ Revision: 450263
+- new version
+- use pear installer
+- use fedora %%pos/%%postun
+
+* Thu Sep 03 2009 Christophe Fergeau <cfergeau@mandriva.com> 1.1.1-6mdv2010.0
++ Revision: 426637
+- rebuild
+
+* Wed Dec 31 2008 Oden Eriksson <oeriksson@mandriva.com> 1.1.1-5mdv2009.1
++ Revision: 321816
+- rebuild
+
+* Wed Jun 18 2008 Thierry Vignaud <tv@mandriva.org> 1.1.1-4mdv2009.0
++ Revision: 224737
+- rebuild
+
+* Tue Mar 04 2008 Oden Eriksson <oeriksson@mandriva.com> 1.1.1-3mdv2008.1
++ Revision: 178510
+- rebuild
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - kill re-definition of %%buildroot on Pixel's request
+
+
+* Sat Nov 11 2006 Oden Eriksson <oeriksson@mandriva.com> 1.1.1-2mdv2007.0
++ Revision: 81095
+- Import php-pear-HTML_Javascript
+
+* Fri Feb 10 2006 Oden Eriksson <oeriksson@mandriva.com> 1.1.1-2mdk
+- new group (Development/PHP)
+
+* Thu Sep 22 2005 Oden Eriksson <oeriksson@mandriva.com> 1.1.1-1mdk
+- 1.1.1
+
+* Fri Aug 26 2005 Oden Eriksson <oeriksson@mandriva.com> 1.1.0-6mdk
+- rebuilt to fix auto deps
+
+* Wed Aug 10 2005 Oden Eriksson <oeriksson@mandriva.com> 1.1.0-5mdk
+- rebuilt to use new pear auto deps/reqs from pld
+
+* Sun Jul 31 2005 Oden Eriksson <oeriksson@mandriva.com> 1.1.0-4mdk
+- fix deps
+
+* Thu Jul 21 2005 Oden Eriksson <oeriksson@mandriva.com> 1.1.0-3mdk
+- reworked the %%post and %%preun stuff, like in conectiva
+- fix deps
+
+* Wed Jul 20 2005 Oden Eriksson <oeriksson@mandriva.com> 1.1.0-2mdk
+- fix deps
+
+* Tue Jul 19 2005 Oden Eriksson <oeriksson@mandriva.com> 1.1.0-1mdk
+- initial Mandriva package (PLD import)
+
