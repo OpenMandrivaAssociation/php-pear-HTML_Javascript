@@ -5,7 +5,7 @@
 Summary:	An interface for creating simple JS scripts
 Name:		php-pear-%{modname}
 Version:	1.1.2
-Release:	13
+Release:	14
 License:	PHP License
 Group:		Development/PHP
 Url:		http://pear.php.net/package/HTML_Javascript/
