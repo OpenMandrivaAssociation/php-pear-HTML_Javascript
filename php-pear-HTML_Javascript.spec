@@ -8,7 +8,7 @@ Version:	1.1.2
 Release:	17
 License:	PHP License
 Group:		Development/PHP
-Url:		http://pear.php.net/package/HTML_Javascript/
+Url:		https://pear.php.net/package/HTML_Javascript/
 Source0:	http://download.pear.php.net/package/%{modname}-%{version}.tgz
 BuildArch:	noarch
 BuildRequires:	php-pear
